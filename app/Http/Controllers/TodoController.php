@@ -22,19 +22,19 @@ class TodoController extends Controller
      */
     public function index()
     {
-        $serviceAccount = ServiceAccount::fromJsonFile(__DIR__.'/laravelapptest-2d4e2-firebase-adminsdk-j20j8-ff7bae6460.json');
-        $firebase_db_url = env('FIREBASE_DB_URL');
-        $firebase = (new Factory)
-            ->withServiceAccount($serviceAccount)
-            ->withDatabaseUri($firebase_db_url)
-            ->create();
-        $fdb = $firebase->getDatabase();
-        $todos = $fdb->getReference('todos')->getValue();
+        // $serviceAccount = ServiceAccount::fromJsonFile(__DIR__.'/laravelapptest-2d4e2-firebase-adminsdk-j20j8-ff7bae6460.json');
+        // $firebase_db_url = env('FIREBASE_DB_URL');
+        // $firebase = (new Factory)
+        //     ->withServiceAccount($serviceAccount)
+        //     ->withDatabaseUri($firebase_db_url)
+        //     ->create();
+        // $fdb = $firebase->getDatabase();
+        // $todos = $fdb->getReference('todos')->getValue();
 
-        array_shift($todos);
+        // array_shift($todos);
         // $todos = Todo::all();
-        return view('todo.index')
-            ->with('todos', $todos);
+        return view('todo.index');
+            // ->with('todos', $todos);
     }
 
     /**

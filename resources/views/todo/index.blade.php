@@ -5,12 +5,21 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <ul>
-                @foreach($todos as $todo)
-                    <li>{{ $todo['title'] }}</li>
-                @endforeach
-            </ul>
+            <div id="todo-wrapper">
+                <todo-cmpt></todo-cmpt>
+            </div>
         </div>
     </div>
 </div>
+@endsection
+
+@section('scripts')
+
+<script>
+
+    
+
+</script>
+
+
 @endsection
